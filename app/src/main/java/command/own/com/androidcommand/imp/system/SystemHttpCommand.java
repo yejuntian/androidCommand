@@ -1,8 +1,9 @@
-package command.own.com.androidcommand.imp;
+package command.own.com.androidcommand.imp.system;
 
 import android.content.Context;
 
 import command.own.com.androidcommand.http.HttpUtils;
+import command.own.com.androidcommand.imp.AbsHttpCommand;
 
 /**
  * 具体的命令

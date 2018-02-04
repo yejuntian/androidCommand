@@ -3,10 +3,14 @@ package command.own.com.androidcommand.http;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import command.own.com.androidcommand.imp.SystemHttpCommand;
+import command.own.com.androidcommand.imp.system.SystemHttpCommand;
 import command.own.com.androidcommand.inter.IHttpCommand;
 import command.own.com.androidcommand.inter.IRequestParam;
 
+/**
+ * 请求者--Invoker 调用命令
+ * 并且持有命令对象
+ */
 
 public class HttpTask extends AsyncTask<String, Void, String> {
     private Param param;

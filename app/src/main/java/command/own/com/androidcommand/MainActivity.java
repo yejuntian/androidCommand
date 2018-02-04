@@ -1,12 +1,12 @@
 package command.own.com.androidcommand;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import command.own.com.androidcommand.http.HttpTask;
 import command.own.com.androidcommand.http.HttpUtils;
-import command.own.com.androidcommand.imp.SystemHttpCommand;
-import command.own.com.androidcommand.imp.SystemRequestParam;
+import command.own.com.androidcommand.imp.system.SystemHttpCommand;
+import command.own.com.androidcommand.imp.system.SystemRequestParam;
 import command.own.com.androidcommand.inter.IHttpCommand;
 
 /**
@@ -29,9 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        //创建请求参数
         SystemRequestParam requestParam = new SystemRequestParam();
         requestParam.put("name", "zhangsan");
         requestParam.put("age", "20");
+
+        //设置请求方式，后开始网络请求
         builder.setRequestCommand(new SystemHttpCommand())
                 .setRequestParam(requestParam)
                 .setRequestType(IHttpCommand.RequestType.GET)

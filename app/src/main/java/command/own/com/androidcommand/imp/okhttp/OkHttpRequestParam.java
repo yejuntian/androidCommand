@@ -1,11 +1,15 @@
-package command.own.com.androidcommand.imp;
+package command.own.com.androidcommand.imp.okhttp;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import command.own.com.androidcommand.inter.IRequestParam;
 
-public class SystemRequestParam implements IRequestParam<HashMap<String, Object>> {
+/**
+ * okHttp请求参数
+ */
+
+public class OkHttpRequestParam implements IRequestParam<String> {
     private Map<String, Object> map = new HashMap<String, Object>();
 
     @Override
@@ -24,7 +28,8 @@ public class SystemRequestParam implements IRequestParam<HashMap<String, Object>
     }
 
     @Override
-    public HashMap<String, Object> getRequestParam() {
-        return (HashMap<String, Object>) map;
+    public String getRequestParam() {
+        //需要转换为键值对形势
+        return null;
     }
 }
